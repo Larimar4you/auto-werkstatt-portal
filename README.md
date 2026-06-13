@@ -8,14 +8,19 @@ AutoWerkstatt Portal is designed for small and medium-sized car repair shops tha
 
 The workshop creates a repair order, the system generates a unique public tracking link, and the customer can access the current repair status by scanning a QR code.
 
-## Core Concept
+````md
+## How it works
 
-```txt
-Workshop creates a repair order
-→ System generates a public tracking token
-→ QR code links to the public tracking page
-→ Customer checks repair status without login
-```
+````mermaid
+flowchart TD
+    A[Workshop Admin] --> B[Creates service request]
+    B --> C[Admin Dashboard]
+    C --> D[(MongoDB Database)]
+    D --> E[Generate public tracking token]
+    E --> F[QR Code / Tracking Link]
+    F --> G[Customer scans QR code]
+    G --> H[Customer Tracking Page]
+    H --> I[Shows repair status, comments, cost and photos]
 
 The MVP focuses on repair order management, public status tracking, estimated costs, and workshop feedback.
 
@@ -54,7 +59,7 @@ Example route:
 
 ```txt
 /track/:publicToken
-```
+````
 
 The public tracking page exposes only customer-safe repair information:
 
@@ -310,3 +315,4 @@ The project currently includes:
 
 Lara Kosta
 Fullstack Developer
+````
