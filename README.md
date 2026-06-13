@@ -11,7 +11,7 @@ The workshop creates a repair order, the system generates a unique public tracki
 ````md
 ## How it works
 
-````mermaid
+```mermaid
 flowchart TD
     A[Workshop Admin] --> B[Creates service request]
     B --> C[Admin Dashboard]
@@ -21,6 +21,7 @@ flowchart TD
     F --> G[Customer scans QR code]
     G --> H[Customer Tracking Page]
     H --> I[Shows repair status, comments, cost and photos]
+```
 
 The MVP focuses on repair order management, public status tracking, estimated costs, and workshop feedback.
 
@@ -59,6 +60,7 @@ Example route:
 
 ```txt
 /track/:publicToken
+```
 ````
 
 The public tracking page exposes only customer-safe repair information:
@@ -315,4 +317,7 @@ The project currently includes:
 
 Lara Kosta
 Fullstack Developer
-````
+
+```
+
+```
