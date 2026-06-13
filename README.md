@@ -8,7 +8,6 @@ AutoWerkstatt Portal is designed for small and medium-sized car repair shops tha
 
 The workshop creates a repair order, the system generates a unique public tracking link, and the customer can access the current repair status by scanning a QR code.
 
-````md
 ## How it works
 
 ```mermaid
@@ -61,7 +60,6 @@ Example route:
 ```txt
 /track/:publicToken
 ```
-````
 
 The public tracking page exposes only customer-safe repair information:
 
